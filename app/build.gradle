@@ -1,0 +1,30 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.starbore.game'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId 'com.starbore.game'
+        minSdk 21
+        targetSdk 34
+        versionCode 5
+        versionName '1.4.1'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt')
+            signingConfig signingConfigs.debug
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+// No dependencies: plain Android framework only, no ads/analytics SDKs.
